@@ -3,7 +3,7 @@
 
 import sys
 
-def help1():
+def help():
     """"
     Функция для вывода списка команд
     """
@@ -16,7 +16,7 @@ def help1():
     print("exit - завершить работу с программой.")
 
 
-def add1():
+def add():
     """"
     Функция для добавления информации о новых маршрутах
     """
@@ -31,7 +31,7 @@ def add1():
     return i
 
 
-def error1(command):
+def error(command):
     """"
     функция для неопознанных команд
     """
@@ -117,7 +117,7 @@ def main():
 
             case 'add':
                 # Добавить словарь в список.
-                i = add1()
+                i = add()
                 point.append(i)
                 # Отсортировать список в случае необходимости.
                 if len(point) > 1:
@@ -130,10 +130,10 @@ def main():
                 select(point)
 
             case 'help':
-                help1()
+                help()
 
             case _:
-                error1(command)
+                error(command)
 
 
 if __name__ == '__main__':
